@@ -3,7 +3,7 @@
 <div style="background-color: #04080f; color: #d1d9e6; font-family: sans-serif; padding: 20px; border-radius: 15px;">
 
   <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="logo.png" style="width: 72px; height: 72px; border-radius: 18px; margin-right: 15px; border: 1px solid #1c2e4a; object-fit: cover;">
+    <img src="Logo.png" style="width: 72px; height: 72px; border-radius: 18px; margin-right: 15px; border: 1px solid #1c2e4a; object-fit: cover;">
     <div>
       <h1 style="margin: 0; color: #fff; font-size: 1.5rem;">Mcc Calculator</h1>
       <p style="margin: 0; color: #00a2ff; font-weight: bold; font-size: 0.9rem;">projdenutch</p>
@@ -16,11 +16,11 @@
 
   <p style="font-weight: bold; color: #fff; margin-bottom: 10px;">Screenshots:</p>
   <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
-    <img src="screenshot1.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
-    <img src="screenshot2.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
-    <img src="screenshot3.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
-    <img src="screenshot4.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
-    <img src="screenshot5.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
+    <img src="SCREENSHOT1.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
+    <img src="SCREENSHOT2.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
+    <img src="SCREENSHOT3.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
+    <img src="SCREENSHOT4.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
+    <img src="SCREENSHOT5.png" style="height: 200px; border-radius: 8px; border: 1px solid #1c2e4a;">
   </div>
 
   <div style="text-align: center; margin: 30px 0;">
