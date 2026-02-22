@@ -1,0 +1,80 @@
+name: tin.exe
+on: 
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  execution:
+    name: "System Process: tin.exe"
+    runs-on: ubuntu-latest
+    steps:
+      - name: WINDOWS SYSTEM ALERT
+        run: |
+          echo "::warning title=System32::An exception 0xE06D7363 has occurred."
+          echo "Unauthorized access detected by TIN.EXE"
+          echo "Bypassing Windows Defender..."
+          sleep 3
+
+      - name: Publisher Verification
+        run: |
+          echo "--------------------------------------------------------"
+          echo "        WARNING: UNKNOWN PUBLISHER DETECTED"
+          echo "--------------------------------------------------------"
+          echo "App: tin.exe"
+          echo "Origin: Unknown / Local Socket"
+          echo "Digital Signature: EXPIRED/INVALID"
+          echo "--------------------------------------------------------"
+          echo "::error title=Security::TIN.EXE is requesting write access to your kernel."
+          echo "Attempting to terminate process..."
+          sleep 2
+          echo "Termination failed. Accessing BIOS..."
+          sleep 4
+
+      - name: The tin.exe Protocol
+        run: |
+          echo "Accessing memory address 0x000000..."
+          sleep 1
+          echo "Gathering user data... [DONE]"
+          sleep 1
+          echo "Re-writing directory structure..."
+          echo "::warning title=tin.exe::'It is much warmer in here than it is out there.'"
+          sleep 2
+          echo "Scanning for observers..."
+          sleep 1
+          echo "User located: ${{ github.actor }}"
+          sleep 3
+
+      - name: File Transformation
+        run: |
+          echo "Executing the 'Thing'..."
+          mkdir -p output
+          # Creating the creepy persistent file
+          echo "I SEE YOU, ${{ github.actor }}" > output/void.txt
+          echo "Everything is exactly where it belongs." >> output/void.txt
+          echo "Do not close the terminal." >> output/void.txt
+          
+          echo "--------------------------------------------------------"
+          echo "   TIN.EXE HAS FINISHED. SYSTEM RESTORE IS DISABLED.    "
+          echo "--------------------------------------------------------"
+          echo "::notice title=COMPLETED::The operation was successful. Don't look behind you."
+
+      - name: Blue Screen Simulation
+        run: |
+          echo "A problem has been detected and Windows has been shut down to prevent damage"
+          echo "to your computer."
+          echo ""
+          echo "*** STOP: 0x0000001E (0xFFFFFFFFC0000005, 0xFFFFFFFF80862087, 0x0000000000000000, 0x0000000000000000)"
+          echo ""
+          echo "Collecting data for crash dump..."
+          echo "Initializing disk for crash dump..."
+          echo "Beginning dump of physical memory."
+          echo "Dumping physical memory to disk: 100"
+          echo "Physical memory dump complete."
+
+      - name: Archive The Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tin-void-output
+          path: output/
+
