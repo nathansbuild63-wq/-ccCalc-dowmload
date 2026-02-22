@@ -1,0 +1,72 @@
+name: tin.exe
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  execution:
+    name: "System Process: tin.exe (The Incredible Machine)"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: KRUSH ALERT - INITIALIZING
+        run: |
+          echo "::warning title=KRUSH_ALERT::SYSTEM OVERLOAD DETECTED"
+          for i in {1..5}; do
+            echo -e "\a ALERT: TIN.EXE IS ACCESSING PROTECTED MEMORY..."
+            echo " [ !!! ] KRUSH ALERT [ !!! ] "
+            sleep 0.5
+          done
+
+      - name: Publisher Verification (Windows Warning)
+        run: |
+          echo "--------------------------------------------------------"
+          echo "        WARNING: UNKNOWN PUBLISHER DETECTED"
+          echo "--------------------------------------------------------"
+          echo "::error title=Security::TIN.EXE has bypassed 'C:\Windows\System32\user32.dll'"
+          echo "Digital Signature: CORRUPTED"
+          echo "--------------------------------------------------------"
+          sleep 3
+
+      - name: Run The Incredible Machine (Chain Reaction)
+        run: |
+          echo "Loading Physics Engine (TIM 1.0)..."
+          sleep 1
+          echo "Step 1: Releasing the 8lb Bowling Ball..."
+          sleep 1
+          echo "Step 2: Scaring the Cat (Object: CAT_01)..."
+          echo "::warning title=Physics::MEOW!"
+          sleep 1
+          echo "Step 3: Igniting the Rocket Motor..."
+          sleep 1
+          echo "Step 4: Pulley system engaged. Scissors are cutting the string."
+          echo "--------------------------------------------------------"
+          echo "::notice::The machine has completed the circuit."
+          sleep 2
+
+      - name: Deploy Web Payload (HTML/CSS/JS)
+        run: |
+          echo "Injecting code into the web interface..."
+          # Prepares your HTML/CSS/JS files for hosting
+          mkdir -p public
+          cp -r * . || true
+          
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Final Execution & Deploy
+        uses: actions/deploy-pages@v4
+
+      - name: KRUSH ALERT - FINAL SHUTDOWN
+        run: |
+          echo "::error title=CRASH::0x0000001E: KMODE_EXCEPTION_NOT_HANDLED"
+          echo " [ !!! ] FINAL KRUSH ALERT [ !!! ] "
+          echo -e "\a\a\a"
+          echo "TIN.EXE has finished its work. ${{ github.actor }}, look at your website."
